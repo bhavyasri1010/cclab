@@ -1,0 +1,12 @@
+from flask import Flask
+import os
+
+App = flask(__name__)
+
+@App.route("/")
+def hello():
+    return "hello world"
+
+if __name__=="__main__":
+    port=int(os.envron.get("PORT" ,5000))
+    App.run(host="0.0.0.0" ,port=port)
